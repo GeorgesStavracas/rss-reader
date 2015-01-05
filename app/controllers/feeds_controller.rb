@@ -11,6 +11,7 @@ class FeedsController < ApplicationController
   end
 
   def new
+    @feed = Feed.new
   end
 
   def create
@@ -18,7 +19,9 @@ class FeedsController < ApplicationController
     @feed = SimpleRSS.parse open(params[:feed][:url])
     @db_feed = Feed.new(title: @feed.channel.title, url: params[:feed][:url])
 
-    @db_feed.save
-    redirect_to @db_feed
+    if @db_feed.save
+      redirect_to @db_feed
+    else
+      render 'new'
   end
 end
