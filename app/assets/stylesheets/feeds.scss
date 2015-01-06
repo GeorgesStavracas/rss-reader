@@ -1,3 +1,27 @@
-// Place all the styles related to the feeds controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$bg_color: #fafafa;
+$default_font: "Lato", "Open Sans", "Helvetica", sans-serif;
+$default_padding: 6px;
+$link_color: #383838;
+
+body
+{
+  font: 14px $default_font;
+  background-color: $bg_color;
+}
+
+a, a:visited
+{
+  color: $link_color;
+  text-decoration: none;
+}
+
+ul
+{
+  list-style: none;
+
+  li {padding: $default_padding;}
+  li:hover {background-color: darken($bg_color, 8%);}
+}
+
+/* classes */
+.remove-button {vertical-align: middle;}
