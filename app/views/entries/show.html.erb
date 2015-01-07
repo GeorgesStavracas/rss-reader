@@ -21,7 +21,7 @@
 </div>
 <div id="reader">
   <ul> 
-    <% @entries.each do |entry| %>
+    <% @parsed_feed.items.each do |entry| %>
         <li>
           <%= entry.title %>
           <div class="summary">

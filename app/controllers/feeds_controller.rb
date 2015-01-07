@@ -20,7 +20,7 @@ class FeedsController < ApplicationController
     @db_feed = Feed.new(title: @feed.channel.title, url: params[:feed][:url])
 
     if @db_feed.save
-      redirect_to @db_feed
+      redirect_to :controller=>'entries', :action=>'index'
     else
       render 'new'
     end

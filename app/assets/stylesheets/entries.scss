@@ -1,3 +1,82 @@
-// Place all the styles related to the entries controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "_common.scss";
+
+#reader
+{
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  top: 0px;
+  right: 0px;
+  color: #fafafa;
+  background-color: #333;
+  overflow-y: scroll;
+
+  ul
+  {
+    list-style: none;
+    padding: $default_padding;
+
+    li {padding: $default_padding;}
+    li:hover {background-color: #fafafa; color: #333;}
+  }
+}
+
+#feeds
+{
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  top: 0px;
+  left: 0px;
+  border-right: $border;
+
+  ul
+  {
+    list-style: none;
+    padding: $default_padding;
+
+    li {padding: $default_padding;}
+    li:hover {background-color: darken($bg_color, 8%);}
+  }
+}
+
+#new-feed
+{
+  position: relative;
+  margin: 6px 0px 6px 6px;
+  width: 100%;
+}
+
+/* classes */
+.remove-button {vertical-align: middle;}
+
+.add-feed-button
+{
+	background-color: #44c767;
+	border: 1px solid #18ab29;
+	color: #ffffff;
+	font-size: 12px;
+	padding: $default_padding;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #2f6627;
+}
+
+.add-feed-entry
+{
+  font-size: 12px;
+  appearance: none;
+  padding: $default_padding;
+  min-width: 32px;
+  background-color: white;
+  border: $border;
+}
+
+.summary
+{
+  font-size: 10px;
+  color: darken($bg_color, 50%);
+}
